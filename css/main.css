@@ -4472,9 +4472,8 @@ readers do not read off random characters that represent icons */
 
 .portfolio__project {
   display: block;
-  width: 50%;
-  padding: 0 15px;
-  margin-bottom: 30px; }
+  width: calc(50% - 30px);
+  margin: 0 15px 30px; }
 
 .filter {
   text-align: center; }
