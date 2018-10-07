@@ -4279,7 +4279,8 @@ readers do not read off random characters that represent icons */
   .menu__item {
     position: relative;
     border-bottom: 1px solid #eaeaea;
-    overflow: hidden; }
+    overflow: hidden;
+    cursor: pointer; }
     .menu__item:before {
       content: '';
       position: absolute;
