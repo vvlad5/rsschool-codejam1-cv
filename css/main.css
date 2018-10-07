@@ -4296,6 +4296,17 @@ readers do not read off random characters that represent icons */
       transition: -webkit-transform 0.3s ease-out;
       transition: transform 0.3s ease-out;
       transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+    .menu__item:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      display: block;
+      visibility: hidden;
+      border: 21px solid transparent;
+      border-left: 11px solid #ffd42d; }
     .menu__item:hover:before {
       -webkit-transform: translateX(0);
               transform: translateX(0); }
@@ -4309,15 +4320,7 @@ readers do not read off random characters that represent icons */
         -webkit-transform: translateX(0);
                 transform: translateX(0); }
       .menu__item.active:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
-        display: block;
-        border: 21px solid transparent;
-        border-left: 11px solid #ffd42d; }
+        visibility: visible; }
       .menu__item.active .item__descr {
         color: #2a2a2a; }
     .menu__item .item__link {
