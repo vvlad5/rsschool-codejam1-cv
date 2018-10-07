@@ -4397,3 +4397,43 @@ readers do not read off random characters that represent icons */
     font-size: 12px;
     font-weight: 400;
     white-space: nowrap; }
+
+.section {
+  padding: 90px; }
+  .section__title {
+    margin-bottom: 100px;
+    text-align: center; }
+    .section__title h1,
+    .section__title h2 {
+      margin-bottom: 7px;
+      font-size: 55px;
+      font-weight: 400;
+      color: #2a2a2a; }
+    .section__title h3 {
+      font-size: 18px;
+      color: #999999;
+      font-weight: 300; }
+    .section__title p {
+      font-size: 14px;
+      color: #999999;
+      font-weight: 300;
+      text-transform: uppercase; }
+
+.block__title {
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2a2a2a; }
+  .block__title:before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: block;
+    width: 20px;
+    height: 8px;
+    background: #ffd42d; }
