@@ -4158,9 +4158,7 @@ readers do not read off random characters that represent icons */
   background: #ffffff; }
 
 .footer {
-  width: 40px;
-  height: 200px;
-  background: #2a2a2a; }
+  width: 40px; }
 
 .btn {
   display: inline-block;
@@ -4344,3 +4342,58 @@ readers do not read off random characters that represent icons */
       line-height: 20px;
       text-transform: uppercase;
       color: #999999; }
+
+.social__item {
+  position: relative;
+  border-bottom: 1px solid #eaeaea;
+  background: #ffd42d;
+  overflow: hidden; }
+  .social__item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #2a2a2a;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+  .social__item:hover:before {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+
+.social__link {
+  position: relative;
+  display: block;
+  padding: 20px; }
+
+.social__ico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  font-size: 12px;
+  color: #fff; }
+
+.copyright {
+  float: left;
+  min-width: 150px;
+  padding: 13px 22px;
+  -webkit-transform: translateZ(0) rotate(90deg);
+          transform: translateZ(0) rotate(90deg);
+  -webkit-transform-origin: 20px 50%;
+          transform-origin: 20px 50%;
+  color: #ffffff;
+  background: #2a2a2a; }
+  .copyright p {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap; }
