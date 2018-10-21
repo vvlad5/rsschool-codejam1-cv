@@ -4840,10 +4840,13 @@ readers do not read off random characters that represent icons */
           .list__col:last-child b {
             display: none; } }
 
-.list2 {
+.skills {
   position: relative;
-  padding: 35px 0; }
-  .list2:before, .list2:after {
+  padding: 40px 0; }
+  @media (max-width: 767px) {
+    .skills {
+      padding: 0; } }
+  .skills:before, .skills:after {
     content: '';
     position: absolute;
     left: 50%;
@@ -4854,20 +4857,27 @@ readers do not read off random characters that represent icons */
     height: 12px;
     border-radius: 50%; }
     @media (max-width: 767px) {
-      .list2:before, .list2:after {
+      .skills:before, .skills:after {
         visibility: hidden; } }
-  .list2:before {
-    top: 17px;
+  .skills:before {
+    top: 16px;
     background: #2a2a2a; }
-  .list2:after {
-    bottom: 17px;
+  .skills:after {
+    bottom: 16px;
     background: #ffd42d; }
-  .list2__inner {
+  .skills__inner {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-    .list2__inner:after {
+    display: flex;
+    padding: 30px 0; }
+    @media (max-width: 767px) {
+      .skills__inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    .skills__inner:after {
       content: '';
       position: absolute;
       top: 0;
@@ -4878,6 +4888,117 @@ readers do not read off random characters that represent icons */
       width: 1px;
       height: 100%;
       background: #eaeaea; }
-  .list2__col {
+      @media (max-width: 767px) {
+        .skills__inner:after {
+          visibility: hidden; } }
+  .skills__col {
     width: 50%;
-    padding: 0 25px; }
+    padding: 0 27px; }
+    @media (max-width: 767px) {
+      .skills__col {
+        width: 100%;
+        padding: 0; }
+        .skills__col:first-child {
+          margin-bottom: 30px; } }
+  .skills__block {
+    margin-bottom: 30px; }
+    .skills__block:last-child {
+      margin-bottom: 0; }
+  .skills__title {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2a2a2a; }
+  .skills__languages {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px; }
+    .skills__languages span {
+      margin-left: 3px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      color: #999999; }
+  .skills__assets {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 22px;
+    color: #999999; }
+
+.stack__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 767px) {
+    .stack__item {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+
+.stack__label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-left: 17px; }
+  @media (max-width: 767px) {
+    .stack__label {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      margin-left: 0;
+      margin-right: 17px; } }
+
+@media (max-width: 767px) {
+  .stack__rating {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; } }
+
+.stack__rating li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #ffd42d; }
+  .stack__rating li:last-child {
+    margin-right: 0; }
+  .stack__rating li.inactive {
+    background: #eaeaea; }
+
+.hobbies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .hobbies__item {
+    margin-right: 12px;
+    text-align: center; }
+    .hobbies__item:last-child {
+      margin-right: 0; }
+  .hobbies__icon {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    border: 1px solid #ffd42d;
+    border-radius: 50%;
+    color: #ffd42d;
+    font-size: 16px; }
+    .hobbies__icon:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .hobbies__label {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    color: #999999; }
