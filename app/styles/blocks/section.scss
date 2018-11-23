@@ -1,0 +1,72 @@
+.section {
+  display: none;
+  padding: 90px;
+
+  @include laptop {
+    padding: 90px 50px;
+  }
+
+  @include tablet {
+    padding: 80px 30px;
+  }
+
+  @include mobile-l {
+    padding: 80px 15px;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  &.enter {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 0.2s ease,
+      opacity 0.25s ease;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__title {
+    margin-bottom: 100px;
+    text-align: center;
+
+    h1,
+    h2 {
+      margin-bottom: 7px;
+      font-size: 55px;
+      font-weight: 400;
+      color: #2a2a2a;
+
+      @include mobile-l {
+        font-size: 36px;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #999999;
+      font-weight: 300;
+
+      @include mobile-l {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: #999999;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      @include mobile-l {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__body {}
+}

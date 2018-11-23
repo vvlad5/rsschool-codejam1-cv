@@ -1,0 +1,63 @@
+.filter {
+  text-align: center;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+
+    @include mobile-l {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    &:after {
+      content: '/';
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      transform: translateY(-55%);
+      color: rgba(42, 42, 42, 0.5);
+
+      @include mobile-l {
+        visibility: hidden;
+      }
+    }
+
+    &:last-child {
+      @include mobile-l {
+        margin-bottom: 0;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.active {
+      .filter__btn {
+        color: rgba(42, 42, 42, 1);
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgba(42, 42, 42, 0.5);
+    cursor: pointer;
+    outline: none;
+
+    @include mobile-l {
+      padding: 5px;
+    }
+
+    &:hover {
+      color: rgba(42, 42, 42, 1);
+    }
+  }
+}

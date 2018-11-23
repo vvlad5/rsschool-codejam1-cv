@@ -1,0 +1,14 @@
+.content {
+  background: #ffffff;
+  box-shadow: 0px 8px 25px -10px rgba(0, 0, 0, 0.35),
+    0px 15px 0px -8px #ffd42d,
+    0px 15px 0px -7px #ffd42d,
+    0px 16px 25px -10px rgba(0, 0, 0, 0.35),
+    0px 30px 0px -15px #ffd42d,
+    0px 30px 0px -14px #ffd42d;
+
+  @include desktop-and-laptop {
+    width: 75%;
+    max-width: 890px;
+  }
+}

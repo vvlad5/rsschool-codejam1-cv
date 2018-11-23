@@ -1,0 +1,75 @@
+.list {
+  position: relative;
+  padding: 40px 0;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  &:before {
+    top: 0;
+    background: #2a2a2a;
+  }
+
+  &:after {
+    bottom: 0;
+    background: $main-color;
+  }
+
+  &__inner {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 1px;
+      height: calc(100% - 34px);
+      background: #eaeaea;
+    }
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+  }
+
+  &__col {
+    width: 50%;
+    padding: 2px 25px;
+    font-size: 15px;
+    line-height: 26px;
+
+    @include mobile-s {
+      padding: 2px 10px;
+    }
+
+    &:first-child {
+      font-weight: 600;
+      text-align: right;
+    }
+
+    &:last-child {
+      color: #999999;
+      text-align: left;
+
+      b {
+        font-weight: 500;
+        color: #444444;
+
+        @include mobile-m {
+          display: none;
+        }
+      }
+    }
+  }
+}

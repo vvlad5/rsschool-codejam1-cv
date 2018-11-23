@@ -1,0 +1,19 @@
+.about {
+  &__text {
+    padding: 0 80px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 27px;
+    color: #999999;
+
+    @include mobile-l {
+      padding: 0;
+    }
+  }
+
+  &__sign {
+    margin: 20px auto 0;
+  }
+}

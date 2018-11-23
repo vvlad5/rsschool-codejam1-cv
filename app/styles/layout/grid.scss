@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $mobileMedia + 1) {
+  .container {
+    max-width: $tabletWidth;
+  }
+}
+
+@media (min-width: $tabletMedia + 1) {
+  .container {
+    max-width: $desktopWidth;
+  }
+}

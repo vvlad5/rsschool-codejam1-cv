@@ -1,0 +1,140 @@
+.menu {
+  @include desktop-and-laptop {
+    border-right: 1px solid #eaeaea;
+  }
+
+  @include tablet-and-phone {
+    display: flex;
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+    border-bottom: 1px solid #eaeaea;
+    cursor: pointer;
+
+    @include tablet-and-phone {
+      flex-grow: 1;
+    }
+
+    @include tablet-and-phone {
+      border: {
+        right: 1px solid #eaeaea;
+        bottom: 1px solid #eaeaea;
+      }
+    }
+
+    &:last-child {
+      @include desktop-and-laptop {
+        border-bottom: none;
+      }
+
+      @include tablet-and-phone {
+        border-right: none;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      background: $main-color;
+      transition: transform 0.23s ease;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      display: block;
+      visibility: hidden;
+      border: 21px solid transparent;
+
+      @include desktop-and-laptop {
+        border-left: 11px solid $main-color;
+      }
+
+      @include tablet-and-phone {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 11px solid $main-color;
+      }
+    }
+
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+      }
+
+      .item__descr {
+        color: #2a2a2a;
+      }
+    }
+
+    &.active {
+      &:before {
+        transform: scaleX(1);
+      }
+
+      &:after {
+        visibility: visible;
+      }
+
+      .item__descr {
+        color: #2a2a2a;
+      }
+    }
+
+    .item {
+      &__link {
+        position: relative;
+        display: block;
+        padding: 30px 0;
+        text-align: center;
+      }
+
+      &__ico {
+        display: block;
+        font-size: 22px;
+
+        @include mobile-l {
+          font-size: 24px;
+        }
+      }
+
+      &__label {
+        margin-top: 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #2a2a2a;
+
+        @include mobile-l {
+          display: none;
+        }
+      }
+
+      &__descr {
+        display: block;
+        margin-top: 4px;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #999999;
+
+        @include mobile-l {
+          display: none;
+        }
+      }
+    }
+  }
+}

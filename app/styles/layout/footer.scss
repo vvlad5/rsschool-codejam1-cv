@@ -1,0 +1,38 @@
+.footer {
+  width: 40px;
+
+  @include tablet-and-phone {
+    width: 100%;
+  }
+
+  &__inner {
+    @include tablet-and-phone {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__copyright {
+    display: inline-block;
+    padding: 13px 25px;
+    transform: rotate(90deg) translateZ(0);
+    transform-origin: 20px 50%;
+    color: #ffffff;
+    background: #2a2a2a;
+
+    @include tablet-and-phone {
+      transform: rotate(0) translateZ(0);
+    }
+
+    @include mobile-s {
+      display: none;
+    }
+
+    p {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+}

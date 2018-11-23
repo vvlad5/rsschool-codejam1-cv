@@ -1,0 +1,10 @@
+.header {
+  width: 156px;
+  background: #ffffff;
+
+  @include tablet-and-phone {
+    width: 100%;
+  }
+
+  &__inner {}
+}
