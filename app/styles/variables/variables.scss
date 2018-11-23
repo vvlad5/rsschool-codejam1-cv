@@ -1,0 +1,28 @@
+// Container Width
+$desktopWidth: 1140px;
+$laptopWidth: 960px;
+$tabletWidth: 720px;
+$mobileWidth: 540px;
+
+// Media breakpoint
+$laptopMedia: 1199px;
+$tabletMedia: 991px;
+$mobileMedia: 767px;
+
+// Container gutter
+$gutter: 15px;
+
+// Colors
+$main-color: #ffd42d;
+
+// Fonts
+$fonts_dir: '../fonts/';
+$fa-font-path: '#{$fonts_dir}font-awesome';
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 600;
+$bold: 700;
+$black: 800;
+
+// Style

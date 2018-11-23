@@ -1,0 +1,38 @@
+.hobbies {
+  display: flex;
+
+  &__item {
+    margin-right: 12px;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    border: 1px solid $main-color;
+    border-radius: 50%;
+    color: $main-color;
+    font-size: 16px;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    color: #999999;
+  }
+}

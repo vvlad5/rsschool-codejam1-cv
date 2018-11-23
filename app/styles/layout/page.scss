@@ -1,0 +1,45 @@
+.page {
+  padding: 150px 0;
+  overflow-x: hidden;
+  background: #eaeaea;
+
+  @include tablet-and-phone {
+    padding: 100px 0;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 10px;
+
+    @include tablet-and-phone {
+      flex-direction: column;
+    }
+  }
+
+  &__header {
+    flex-shrink: 0;
+
+    @include tablet-and-phone {
+      order: 2;
+    }
+  }
+
+  &__content {
+    @include tablet-and-phone {
+      width: 100%;
+      order: 3;
+    }
+  }
+
+  &__footer {
+    flex-shrink: 0;
+
+    @include tablet-and-phone {
+      order: 1;
+    }
+  }
+}

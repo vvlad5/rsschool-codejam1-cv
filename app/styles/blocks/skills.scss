@@ -1,0 +1,91 @@
+.skills {
+  position: relative;
+  display: flex;
+  padding: 40px 0;
+
+  @include mobile-l {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    @include mobile-l {
+      visibility: hidden;
+    }
+  }
+
+  &:before {
+    top: 16px;
+    background: #2a2a2a;
+  }
+
+  &:after {
+    bottom: 16px;
+    background: $main-color;
+  }
+
+  &__col {
+    width: 50%;
+    padding: 30px 27px;
+
+    &:first-child {
+      border-right: 1px solid #eaeaea;
+    }
+
+    @include mobile-l {
+      width: 100%;
+      padding: 0;
+
+      &:first-child {
+        margin-bottom: 30px;
+        border-right: 0;
+      }
+    }
+  }
+
+  &__block {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2a2a2a;
+  }
+
+  &__languages {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+
+    span {
+      margin-left: 3px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      color: #999999;
+    }
+  }
+
+  &__assets {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 22px;
+    color: #999999;
+  }
+}
