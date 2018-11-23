@@ -1,6 +1,5 @@
 # rsschool-codejam1-cv
 
-## Install dependencies
 ```
 npm i
 ```
